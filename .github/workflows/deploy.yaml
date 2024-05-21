@@ -4,7 +4,7 @@ on:
   push:
     paths: ["src/main/webpack/**"]
     branches:
-      - "main"
+      - "develop"
 jobs:
   deploy:
     environment:
