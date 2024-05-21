@@ -19,10 +19,10 @@
     "sync": "aemsync -d -p ../ui.apps/src/main/content",
     "watch": "webpack-dev-server --config ./webpack.dev.js --env writeToDisk & chokidar -c \"clientlib\" ./dist & aemsync -w ../ui.apps/src/main/content",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build",
     "build:htl": "node ./tools/htl-converter/index.mjs",
     "prettier": "prettier 'src/main/webpack/!(core-components)/**/*.{js,scss}' --ignore-unknown --write",
-    "plop": "plop"
+    "plop": "plop",
+    "build-storybook": "storybook build -o storybook-static"
   },
   "devDependencies": {
     "@adobe/htlengine": "^6.4.2",
