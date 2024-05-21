@@ -1,0 +1,55 @@
+/* stylelint-disable */
+// Button Primary
+.cmp-button__primary a,
+.cmp-button__primary button,
+.cmp-hero__button-primary .cmp-teaser__action-container:not(:has(a)),
+.cmp-hero__button-primary .cmp-teaser__action-container > :is(a) {
+  flex-basis: auto !important;
+  margin: rem(16) rem(16) rem(16) 0;
+  @include button-variant(
+    $neutral-white,
+    $action-blue-100,
+    $action-blue-100,
+    $action-blue-140,
+    $action-blue-140,
+    $action-blue-160,
+    $action-blue-160,
+    $action-blue-50-1,
+    $action-blue-50-1,
+    $neutral-white,
+    $neutral-100
+  );
+  @include button-size(rem(12), rem(24), rem(900));
+  @include label-default;
+
+  text-decoration: none;
+}
+
+// Button Secondary
+.cmp-button__secondary a,
+.cmp-button__secondary button,
+.cmp-hero__button-secondary .cmp-teaser__action-container:not(:has(a)),
+.cmp-hero__button-secondary .cmp-teaser__action-container > :is(a) {
+  flex-basis: auto !important;
+  margin: rem(16) 0;
+  @include button-variant(
+    $action-blue-100,
+    $neutral-white,
+    $action-blue-100,
+    $action-blue-10-1,
+    $neutral-100,
+    $action-blue-20-1,
+    $action-blue-100,
+    none,
+    $action-blue-50-1,
+    $action-blue-50-1,
+    $neutral-white
+  );
+  @include button-size(rem(12), rem(24), rem(900));
+  @include label-small;
+  @include media(">=desktop") {
+    @include label-default;
+  }
+
+  text-decoration: none;
+}

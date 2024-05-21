@@ -1,0 +1,87 @@
+/* stylelint-disable */
+.cmp-tabs__wrapper {
+  .columncontrol {
+    @include media(">=tablet") {
+      margin-top: $spacing-48;
+    }
+  }
+
+  .cmp-tabs {
+    margin-bottom: $spacing-32;
+    @include media(">=tablet") {
+      margin-bottom: $spacing-48;
+    }
+    @include media(">=desktop") {
+      margin-bottom: $spacing-64;
+    }
+    @include component-container;
+
+    .cmp-tabs__tablist {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style: none;
+      border-bottom: rem(2) solid $neutral-20;
+      margin-top: rem(0) !important;
+    }
+
+    .cmp-tabs__tab {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex-basis: 50%;
+      @include label-small;
+
+      padding: rem(4) rem(16);
+      min-width: rem(87);
+      @include media(">=tablet") {
+        flex-basis: 25%;
+        @include label-default;
+
+        padding: rem(8) rem(16);
+        min-width: rem(127);
+      }
+      @include media(">=desktop") {
+        flex-basis: 12.5%;
+      }
+
+      color: $neutral-100;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $action-blue-10-1;
+      }
+    }
+
+    .cmp-tabs__tab--active {
+      color: $navy-100;
+      border-bottom: rem(2) solid $navy-100;
+      margin-bottom: calc(rem(2) * -1);
+
+      &:focus {
+        color: $navy-100;
+        border: rem(2) solid $neutral-100;
+        outline: none;
+        border-radius: rem(4);
+        opacity: 1;
+      }
+    }
+
+    .cmp-tabs__tabpanel {
+      display: none;
+
+      &--active {
+        display: block;
+        .cmp-pdfviewer__content {
+          height: 500px !important;
+        }
+      }
+
+      &.aem-GridColumn {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

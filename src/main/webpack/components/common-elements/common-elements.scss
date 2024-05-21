@@ -1,0 +1,12 @@
+.cmp-link {
+  @include cmp-link-light;
+}
+
+.link-bg {
+  background: $neutral-100;
+  padding: $spacing-8;
+
+  .cmp-link {
+    @include cmp-link-inverse;
+  }
+}

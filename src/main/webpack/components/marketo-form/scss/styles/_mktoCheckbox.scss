@@ -1,0 +1,92 @@
+/* stylelint-disable */
+.mktoForm {
+  .mktoFieldWrap:has(div):has(.mktoCheckboxList):has(input):has([id="Unsubscribed"]) {
+    input[type="checkbox"] {
+      height: rem(24);
+      width: rem(24);
+    }
+  }
+
+  .mktoCheckboxList {
+    input[type="checkbox"] {
+      position: relative;
+      border: rem(1) solid $neutral-80;
+      border-radius: rem(3.2);
+      background: none;
+      cursor: pointer;
+      line-height: 0;
+      margin: 0 0.6em 0 0;
+      outline: 0;
+      padding: 0 !important;
+      vertical-align: text-top;
+      height: rem(24);
+      width: rem(24);
+      appearance: none;
+
+      &:focus {
+        outline: rem(0);
+        box-shadow: 0 0 0 calc(rem(2.8) * 1) $neutral-white, 0 0 0 calc(rem(2) * 2) $neutral-180;
+      }
+
+      &:not(:checked) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: rem(6);
+        height: rem(11);
+        border: solid $neutral-white;
+        border-width: 0 rem(1.8) rem(1.8) 0;
+        margin: rem(-1) rem(-1) 0 rem(-1);
+        transform: rotate(45deg) translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      &:checked {
+        background-color: $action-blue-100;
+
+        &:disabled {
+          background-color: $neutral-10;
+
+          &::before {
+            border-color: $neutral-50-1;
+            display: block;
+          }
+        }
+      }
+
+      &.mktoInvalid {
+        border-color: $red-100;
+
+        &:focus {
+          outline: rem(0);
+          box-shadow: 0 0 0 calc(rem(2.8) * 1) $neutral-white, 0 0 0 calc(rem(2) * 2) $red-100;
+        }
+
+        &:checked {
+          background-color: transparent;
+          border-color: $neutral-80;
+        }
+
+        &::before {
+          border-color: $red-100;
+        }
+      }
+
+      &:disabled {
+        background-color: $neutral-10;
+        border-color: $neutral-50-1;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

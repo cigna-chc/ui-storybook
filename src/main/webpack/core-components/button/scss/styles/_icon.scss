@@ -1,0 +1,26 @@
+
+/* Default icons */
+
+.cmp-button {
+    .cmp-button__icon { /* stylelint-disable-line */
+        float: left;
+        padding-top: 18px;
+        padding-left: 14px;
+        font-size: 1.25em;
+    }
+}
+
+.cmp-button--icononly { /* stylelint-disable-line */
+    .cmp-button {
+        width: $button-size;
+        height: $button-size;
+    
+        .cmp-button__icon { /* stylelint-disable-line */
+            float: left;
+        }
+
+        .cmp-button__text { /* stylelint-disable-line */
+            display: none;
+        }
+    }
+}

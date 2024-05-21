@@ -1,0 +1,16 @@
+/* stylelint-disable */
+.cmp-separator__horizontal-rule {
+    border-width: 1px;
+    border-style: solid;
+    margin-top: rem(0);
+    margin-bottom: rem(0);
+}
+
+.cmp-separator {
+    margin-top: $spacing-24;
+    margin-bottom: $spacing-24;
+    @include media('>=desktop') {
+        margin-top: $spacing-32;
+        margin-bottom: $spacing-32;
+    }
+}

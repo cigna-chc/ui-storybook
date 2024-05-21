@@ -1,0 +1,42 @@
+/* stylelint-disable */
+.mktoForm .mktoButtonWrap .mktoButton,
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+  margin-top: rem(10);
+  color: $neutral-white !important;
+  border: rem(2) solid $action-blue-100 !important;
+  font-size: rem(16px) !important;
+  background-color: $action-blue-100 !important;
+  background-image: none !important;
+  padding: rem(12) rem(24) !important;
+  border-radius: rem(900);
+  @include label-default;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: $action-blue-140 !important;
+    border: rem(2) solid $action-blue-140 !important;
+  }
+
+  &:focus,
+  &.focus {
+    outline: rem(2) solid $neutral-100 !important;
+    outline-offset: rem(2) !important;
+  }
+
+  &:active,
+  &.active {
+    background-color: $action-blue-160 !important;
+    border: rem(2) solid $action-blue-160 !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] {
+    pointer-events: none;
+    background-color: $action-blue-50-1 !important;
+    border-color: $action-blue-50-1 !important;
+  }
+}

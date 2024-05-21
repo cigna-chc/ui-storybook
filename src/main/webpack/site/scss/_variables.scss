@@ -1,0 +1,51 @@
+// == Font
+$font-family-default: "ValueSans-Regular-Pro", verdana, sans-serif;
+$font-size: 16px;
+$font-height: 1.5;
+$font-weight: normal;
+$font-family-value-sans-pro-black: "ValueSans-Black-Pro";
+$font-family-value-sans-black-italic-pro: "ValueSans-BlackItalic-Pro";
+$font-family-value-sans-bold-pro: "Value Sans Pro", sans-serif;
+$font-family-value-sans-bold-italic-pro: "ValueSans-BoldItalic-Pro";
+$font-family-value-sans-italic-pro: "ValueSans-Italic-Pro";
+$font-family-value-sans-medium-pro: "ValueSans-Medium-Pro";
+$font-family-value-sans-medium-italic-pro: "ValueSans-MediumItalic-Pro";
+$font-family-value-sans-regular-pro-default: "ValueSans-Regular-Pro";
+$font-family-value-serif-bold-pro-default: "Value Serif Pro", serif;
+/* stylelint-disable */
+$font-family-value-sans: var(--fontFamilyValueSans, $font-family-value-sans-regular-pro-default);
+$font-family-value-serif: var(--fontFamilyValueSerif, $font-family-value-serif-bold-pro-default);
+/* stylelint-enable */
+$font-family-base: $font-family-value-sans;
+
+// == Color
+:root {
+  --color-foreground: $neutral-100;
+  --color-background: yellow;
+  --color-link: #2020e0;
+}
+
+// Normal mode
+$color-foreground: $neutral-100;
+$color-background: get-color("light-yellow");
+$color-link: #2020e0;
+
+// Dark mode
+$color-foreground-dark: $color-foreground;
+$color-background-dark: $color-background;
+$color-link-dark: $color-link;
+
+// ----------------- Media query --------------------
+// $screen-xxs: 320px;
+// $screen-xs: 375px;
+// $screen-sm: 768px;
+// $screen-md: 1024px;
+// $screen-lg: 1280px;
+// $screen-xl: 1920px;
+$screen-m-xxs: 320px;
+$screen-t-sm: 768px;
+$screen-d-sm: 1024px;
+
+// ----------------- Layout ----------------------------
+$max-width: 1320px;
+$gutter-padding: 16px;

@@ -1,0 +1,13 @@
+{
+    "git.ignoreMissingGitWarning": true,
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "javascript.validate.enable": false,
+    "stylelint.enable": true,
+    "css.validate": false,
+    "scss.validate": false,
+    "prettier.eslintIntegration": true,
+    "prettier.stylelintIntegration": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 0
+}

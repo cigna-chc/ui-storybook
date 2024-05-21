@@ -1,0 +1,104 @@
+$value-sans-font-path: "/etc.clientlibs/chc/clientlibs/clientlib-site/resources/fonts/value-sans" !default;
+$value-serif-font-path: "/etc.clientlibs/chc/clientlibs/clientlib-site/resources/fonts/value-serif" !default;
+$value-sans-font-local-path: "../resources/fonts/value-sans" !default;
+$value-serif-font-local-path: "../resources/fonts/value-serif" !default;
+
+@font-face {
+  font-family: ValueSans-Black-Pro;
+  src:local("#{$value-sans-font-local-path}/ValueSans-Black-Pro.ttf") format("truetype"),
+    local("#{$value-sans-font-local-path}/ValueSans-Black-Pro.woff") format("woff"),
+    local("#{$value-sans-font-local-path}/ValueSans-Black-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-Black-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-BlackItalic-Pro;
+  src:local("#{$value-sans-font-local-path}/ValueSans-BlackItalic-Pro.ttf") format("ttf"),
+    local("#{$value-sans-font-local-path}/ValueSans-BlackItalic-Pro.woff") format("woff"),
+    local("#{$value-sans-font-local-path}/ValueSans-BlackItalic-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-BlackItalic-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Value Sans Pro";
+  src: local("#{$value-sans-font-local-path}/ValueSans-Bold-Pro.ttf") format("ttf"),
+  local("#{$value-sans-font-local-path}/ValueSans-Bold-Pro.woff") format("woff"),
+  local("#{$value-sans-font-local-path}/ValueSans-Bold-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-Bold-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-BoldItalic-Pro;
+  src: local("#{$value-sans-font-local-path}/ValueSans-BoldItalic-Pro.ttf") format("ttf"),
+      local("#{$value-sans-font-local-path}/ValueSans-BoldItalic-Pro.woff") format("woff"),
+      local("#{$value-sans-font-local-path}/ValueSans-BoldItalic-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-BoldItalic-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-Italic-Pro;
+  src: local("#{$value-sans-font-local-path}/ValueSans-Italic-Pro.ttf") format("ttf"),
+  local("#{$value-sans-font-local-path}/ValueSans-Italic-Pro.woff") format("woff"),
+  local("#{$value-sans-font-local-path}/ValueSans-Italic-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-Italic-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-Medium-Pro;
+  src: local("#{$value-sans-font-local-path}/ValueSans-Medium-Pro.ttf") format("ttf"),
+  local("#{$value-sans-font-local-path}/ValueSans-Medium-Pro.woff") format("woff"),
+  local("#{$value-sans-font-local-path}/ValueSans-Medium-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-Medium-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-MediumItalic-Pro;
+  src: local("#{$value-sans-font-local-path}/ValueSans-MediumItalic-Pro.ttf") format("ttf"),
+  local("#{$value-sans-font-local-path}/ValueSans-MediumItalic-Pro.woff") format("woff"),
+  local("#{$value-sans-font-local-path}/ValueSans-MediumItalic-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-MediumItalic-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ValueSans-Regular-Pro;
+  src:   local("#{$value-sans-font-local-path}/ValueSans-Regular-Pro.ttf") format("ttf"),
+  local("#{$value-sans-font-local-path}/ValueSans-Regular-Pro.woff") format("woff"),
+  local("#{$value-sans-font-local-path}/ValueSans-Regular-Pro.woff2") format("woff2"),
+    url("#{$value-sans-font-local-path}/ValueSans-Regular-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Value Serif Pro";
+  src: local("#{$value-serif-font-local-path}/ValueSerif-Bold-Pro.ttf") format("ttf"),
+  local("#{$value-serif-font-local-path}/ValueSerif-Bold-Pro.woff") format("woff"),
+  local("#{$value-serif-font-local-path}/ValueSerif-Bold-Pro.woff2") format("woff2"),
+    url("#{$value-serif-font-local-path}/ValueSerif-Bold-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

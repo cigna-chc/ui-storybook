@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "selector-id-pattern": "^[a-z][a-z0-9]",
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9]",
+    "scss/at-mixin-pattern": "^[a-z][a-z0-9]"
+  }
+}

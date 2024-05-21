@@ -1,0 +1,105 @@
+/*
+ *  Copyright 2018 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+/* stylelint-disable */
+
+.aem-Grid.aem-Grid--default--12>.aem-GridColumn.aem-GridColumn--default--12.cmp-text-wrapper,
+.cmp-text-wrapper {
+    @include component-container;
+    @include body-default;
+
+    margin-bottom: $spacing-8;
+
+    .cmp-text,
+    .cmp-contentfragment {
+        ul {
+            display: block;
+            padding-inline-start: 1em;
+            margin-block: 1em 1em;
+            margin-inline: 0 0;
+
+            li {
+                padding-left: 12px;
+
+                &::before {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    font-size: 0.55em;
+
+                    /* Better Font Rendering =========== */
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: relative;
+                    top: -0.25em;
+                    left: -0.75em;
+                }
+            }
+        }
+
+        ol {
+            display: block;
+            padding-inline-start: 1.5em;
+            margin-block: 1em 1em;
+            margin-inline: 0 0;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        p {
+            margin-top: $spacing-16;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            word-break: break-word;
+        }
+
+        h2:not(p ~ h2) {
+            margin-top: rem(64);
+        }
+
+        h3:not(p ~ h3){
+            margin-top: rem(48);
+        }
+
+        h4:not(p ~ h4) {
+            margin-top: rem(32);
+        }
+
+        h5,
+        h6:not(p ~ h5, p~h6) {
+            margin-top: rem(24);
+        }
+
+        p ~ h2,
+        p ~ h3,
+        p ~ h4, 
+        p ~ h5,
+        p ~ h6 {
+            margin-top: rem(24);
+        }
+    }
+}

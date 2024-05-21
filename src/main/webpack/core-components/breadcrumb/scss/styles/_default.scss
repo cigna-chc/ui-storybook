@@ -1,0 +1,131 @@
+/*
+ *  Copyright 2019 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+ /* stylelint-disable */
+.aem-Grid.aem-Grid--default--12>.aem-GridColumn.aem-GridColumn--default--12.breadcrumb,
+.breadcrumb {
+    @include component-container;
+
+    .cmp-breadcrumb {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        .cmp-breadcrumb__list {
+            padding: rem(4) rem(0) rem(4) rem(0);
+            margin: rem(8) rem(0);
+            list-style: none;
+            border-radius: 0;
+        }
+
+        .cmp-breadcrumb__item {
+            @include label-default;
+
+            font-family: $font-family-value-sans-medium-pro;
+            font-weight: 400;
+            vertical-align: top;
+            display: none;
+
+            &::after {
+                content: none;
+            }
+            @include media('<tablet') {
+                &:nth-last-child(2) {
+                    display: inline-block;
+                    position: relative;
+                    padding: rem(10) rem(22.4);
+
+                    &::before {
+                        font-size: 1em;
+                        content: "";
+                        position: absolute;
+                        left: 4%;
+                        top: 41%;
+                        display: block;
+                        border-left: rem(2) solid $action-blue-100;
+                        border-bottom: rem(2) solid $action-blue-100;
+                        width: rem(8.5);
+                        height: rem(8.5);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            @include media ('>=tablet') {
+                display: inline-block;
+                position: relative;
+
+                &:first-child {
+                    padding-left: rem(0);
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+
+            &--active {
+                @include label-default;
+
+                font-family: $font-family-value-sans-regular-pro-default;
+                font-weight: 400;
+            }
+        }
+
+        .cmp-breadcrumb__item-link {
+            display: inline-block;
+            color: $action-blue-100;
+            border-bottom: none;
+            text-decoration: none;
+            @include label-default;
+
+            font-family: $font-family-value-sans-medium-pro;
+
+            &:hover {
+                color: $navy-100;
+            }
+
+            &:focus {
+                background-color: $neutral-100;
+                color: $neutral-white;
+                border-bottom: none;
+                padding-bottom: 0;
+                outline: none !important;
+            }
+
+            &:first-child {
+                padding-left: rem(0);
+            }
+            @include media('>=tablet') {
+                span {
+                    margin-right: rem(30);
+                }
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="leaf-c-icon"><path d="M16.59 8 12 12.58 7.41 8 6 9.41l6 6 6-6L16.59 8Z"></path></svg>');
+                    background-size: cover;
+                    transform: rotate(-90deg);
+                    filter: invert(36%) sepia(0%) saturate(0%) hue-rotate(142deg) brightness(94%) contrast(85%);
+                    position: absolute;
+                    top: 13%;
+                    right: 4%;
+                }
+            }
+        }
+    }
+  }

@@ -1,0 +1,121 @@
+/* stylelint-disable */
+.cmp-card__wrapper {
+  @include component-container;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  > ul {
+    margin-top: $spacing-24;
+    display: grid;
+    gap: $spacing-24;
+    padding: 0;
+    list-style: none;
+    @include media(">=tablet") {
+      grid-template-columns: minmax(0, calc(50% * 4)) minmax(0, calc(50% * 4));
+    }
+    @include media(">=desktop") {
+      grid-template-columns: minmax(0, calc(9% * 4 - rem(16))) minmax(0, calc(9% * 4 - rem(16))) minmax(
+          0,
+          calc(9% * 4 - rem(16))
+        );
+    }
+
+    > li {
+      box-shadow: 0 0 0 0.125rem $neutral-20;
+      background-color: $neutral-white;
+      border-radius: var(--border-radius-30);
+
+      &:hover {
+        box-shadow: 0 0 0 0.125rem $action-blue-100;
+        background-color: $action-blue-10-1;
+        cursor: pointer;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        
+        @include media(">=desktop") {
+          min-height: rem(400);
+        }
+
+        &:focus {
+          border-radius: var(--border-radius-30);
+          outline-color: $neutral-black;
+          box-shadow:
+            0 0 0 0.125rem $action-blue-100,
+            0 0 0 calc(0.125rem * 2) $neutral-white,
+            0 0 0 calc(0.125rem * 3) $neutral-black;
+        }
+      }
+
+      @include media(">=desktop") {
+        min-height: rem(377);
+      }
+    }
+  }
+
+  .cmp-card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__content {
+      order: 2;
+      display: flex;
+      padding: $spacing-24;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(4);
+      align-self: stretch;
+    }
+
+    &__pretitle {
+      display: none;
+    }
+
+    &__title {
+      color: $action-blue-100;
+      font-family: $font-family-value-sans-medium-pro;
+      font-size: rem(20);
+      line-height: rem(22.4);
+      font-weight: 700;
+      margin-bottom: 0;
+      letter-spacing: normal;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: pre-wrap;
+    }
+
+    &__description {
+      p {
+        color: $neutral-100;
+        @include body-default;
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        white-space: pre-wrap;
+      }
+    }
+
+    &__image {
+      order: 1;
+      height: auto;
+
+      .cmp-image {
+        height: 100%;
+      }
+
+      img {
+        border-radius: var(--border-radius-30) var(--border-radius-30) 0 0;
+        margin: var(--border-radius-0);
+        height: 100%;
+      }
+    }
+  }
+}

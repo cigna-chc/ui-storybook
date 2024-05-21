@@ -1,0 +1,27 @@
+/* stylelint-disable */
+.cmp-hero__wrapper.cmp-hero__background-blue {
+  background-color: $hero-blue-color;
+
+  .cmp-teaser {
+    &::after {
+      mask: $hero-curve;
+      background-color: $hero-blue-color;
+      display: none;
+      width: 6.25%;
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+
+    &__image {
+      &::before {
+        mask: $hero-curve;
+        background-color: $hero-blue-color;
+        display: block;
+        @include media(">=tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+}

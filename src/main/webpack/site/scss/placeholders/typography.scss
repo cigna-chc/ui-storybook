@@ -1,0 +1,435 @@
+@import "../variables";
+@import "../include-media";
+%h1 {
+  @include default-typo-styles(32, 38.4, 700, $font-family-value-serif);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-serif, -1);
+  }
+  @include media(">=desktop") {
+    @include default-typo-styles(64, 80, 700, $font-family-value-serif, -1.5);
+  }
+
+  color: $navy-100;
+}
+
+%h2 {
+  @include default-typo-styles(32, 36.48, 700, $font-family-value-serif);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-serif, -1);
+  }
+
+  color: $navy-100;
+}
+
+%h3 {
+  @include default-typo-styles(24, 26.88, 700, $font-family-value-sans-bold-pro);
+
+  color: $navy-100;
+}
+
+%h4 {
+  @include default-typo-styles(20, 22.4, 700, $font-family-value-sans-bold-pro);
+
+  color: $navy-100;
+}
+
+%h5 {
+  @include default-typo-styles(16, 26.88, 400, $font-family-value-sans-regular-pro-default);
+  @include media(">=desktop") {
+    @include default-typo-styles(20, 22.8, 500, $font-family-value-sans-regular-pro-default);
+  }
+
+  color: $navy-100;
+}
+
+%h6 {
+  @include default-typo-styles(16, 21.28, 500, $font-family-value-sans-regular-pro-default);
+}
+
+%h7 {
+  @include default-typo-styles(24, 26.88, 400, $font-family-value-sans-regular-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(28, 36.4, 400, $font-family-value-sans-regular-pro-default);
+  }
+}
+
+%h8 {
+  @include media(">=tablet") {
+    @include default-typo-styles(24, 26.88, 400, $font-family-value-sans-regular-pro-default);
+  }
+}
+
+%h9 {
+  @include media(">=tablet") {
+    @include default-typo-styles(20, 22.8, 400, $font-family-value-sans-regular-pro-default);
+  }
+}
+
+%h10 {
+  @include media(">=tablet") {
+    @include default-typo-styles(18, 27, 400, $font-family-value-sans-regular-pro-default);
+  }
+}
+
+%h11 {
+  @include default-typo-styles(16, 21.28, 400, $font-family-value-sans-medium-pro);
+}
+
+%h12 {
+  @include media(">=tablet") {
+    @include default-typo-styles(14, 19.67, 400, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h13 {
+  @include media(">=tablet") {
+    @include default-typo-styles(12, 13.56, 400, $font-family-value-sans-regular-pro-default);
+  }
+}
+
+%h1-sansmedium {
+  @include default-typo-styles(64, 80, 500, $font-family-value-sans-medium-pro, -1.5);
+  @include media(">=tablet") {
+    @include default-typo-styles(72, 108, 500, $font-family-value-sans-medium-pro, -1.5);
+  }
+}
+
+%h2-sansmedium {
+  @include default-typo-styles(56, 72.8, 500, $font-family-value-sans-medium-pro, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(64, 80, 500, $font-family-value-sans-medium-pro, -1.5);
+  }
+}
+
+%h3-sansmedium {
+  @include default-typo-styles(48, 53.76, 500, $font-family-value-sans-medium-pro, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(56, 72.8, 500, $font-family-value-sans-medium-pro, -1);
+  }
+}
+
+%h4-sansmedium {
+  @include default-typo-styles(40, 45.6, 500, $font-family-value-sans-medium-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 500, $font-family-value-sans-medium-pro, -1);
+  }
+}
+
+%h5-sansmedium {
+  @include default-typo-styles(32, 38.4, 500, $font-family-value-sans-medium-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(40, 45.6, 500, $font-family-value-sans-medium-pro, -0.5);
+  }
+}
+
+%h6-sansmedium {
+  @include default-typo-styles(28, 36.4, 500, $font-family-value-sans-medium-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(32, 38.4, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h7-sansmedium {
+  @include default-typo-styles(24, 26.88, 500, $font-family-value-sans-medium-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(28, 36.4, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h8-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(24, 26.88, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h9-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(20, 22.8, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h10-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(18, 27, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h11-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(16, 21.28, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h12-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(14, 19.67, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h13-sansmedium {
+  @include media(">=tablet") {
+    @include default-typo-styles(12, 13.56, 500, $font-family-value-sans-medium-pro);
+  }
+}
+
+%h1-sansbold {
+  @include default-typo-styles(64, 80, 700, $font-family-value-sans-bold-pro, -1.5);
+  @include media(">=tablet") {
+    @include default-typo-styles(72, 108, 700, $font-family-value-sans-bold-pro, -1.5);
+  }
+}
+
+%h2-sansbold {
+  @include default-typo-styles(56, 72.8, 700, $font-family-value-sans-bold-pro, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(64, 80, 700, $font-family-value-sans-bold-pro, -1.5);
+  }
+}
+
+%h3-sansbold {
+  @include default-typo-styles(48, 53.76, 700, $font-family-value-sans-bold-pro, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(56, 72.8, 700, $font-family-value-sans-bold-pro, -1);
+  }
+}
+
+%h4-sansbold {
+  @include default-typo-styles(40, 45.6, 700, $font-family-value-sans-bold-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-sans-bold-pro, -1);
+  }
+}
+
+%h5-sansbold {
+  @include default-typo-styles(32, 38.4, 700, $font-family-value-sans-bold-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(40, 45.6, 700, $font-family-value-sans-bold-pro, -0.5);
+  }
+}
+
+%h6-sansbold {
+  @include default-typo-styles(28, 36.4, 700, $font-family-value-sans-bold-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(32, 38.4, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h7-sansbold {
+  @include default-typo-styles(24, 26.88, 700, $font-family-value-sans-bold-pro);
+  @include media(">=tablet") {
+    @include default-typo-styles(28, 36.4, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h8-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(24, 26.88, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h9-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(20, 22.8, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h10-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(18, 27, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h11-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(16, 21.28, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h12-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(14, 19.67, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h13-sansbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(12, 13.56, 700, $font-family-value-sans-bold-pro);
+  }
+}
+
+%h1-serifbold {
+  @include default-typo-styles(64, 80, 700, $font-family-value-serif-bold-pro-default, -1.5);
+  @include media(">=tablet") {
+    @include default-typo-styles(72, 108, 700, $font-family-value-serif-bold-pro-default, -1.5);
+  }
+}
+
+%h2-serifbold {
+  @include default-typo-styles(56, 72.8, 700, $font-family-value-serif-bold-pro-default, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(64, 80, 700, $font-family-value-serif-bold-pro-default, -1.5);
+  }
+}
+
+%h3-serifbold {
+  @include default-typo-styles(48, 53.76, 700, $font-family-value-serif-bold-pro-default, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(56, 72.8, 700, $font-family-value-serif-bold-pro-default, -1);
+  }
+}
+
+%h4-serifbold {
+  @include default-typo-styles(40, 45.6, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-serif-bold-pro-default, -1);
+  }
+}
+
+%h5-serifbold {
+  @include default-typo-styles(32, 38.4, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(40, 45.6, 700, $font-family-value-serif-bold-pro-default, -0.5);
+  }
+}
+
+%h6-serifbold {
+  @include default-typo-styles(28, 36.4, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(32, 38.4, 700, $font-family-value-serif-bold-pro-default);
+  }
+}
+
+%h7-serifbold {
+  @include default-typo-styles(24, 26.88, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(28, 36.4, 700, $font-family-value-serif-bold-pro-default);
+  }
+}
+
+%h8-serifbold {
+  @include media(">=tablet") {
+    @include default-typo-styles(24, 26.88, 700, $font-family-value-serif-bold-pro-default);
+  }
+}
+
+// Semantic
+// Display
+%display-default {
+  @include default-typo-styles(56, 72.8, 700, $font-family-value-serif-bold-pro-default, -1);
+  @include media(">=tablet") {
+    @include default-typo-styles(64, 80, 700, $font-family-value-serif-bold-pro-default, -1.5);
+  }
+}
+
+%display-small {
+  @include default-typo-styles(40, 45.6, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-serif-bold-pro-default, -1);
+  }
+}
+
+// HeadLine
+%headline-large {
+  @include default-typo-styles(32, 36.48, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(48, 53.76, 700, $font-family-value-serif-bold-pro-default, -1);
+  }
+}
+
+%headline-default {
+  @include default-typo-styles(32, 38.4, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(40, 45.6, 700, $font-family-value-serif-bold-pro-default);
+  }
+}
+
+%headline-small {
+  @include default-typo-styles(28, 36.4, 700, $font-family-value-serif-bold-pro-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(32, 38.4, 700, $font-family-value-serif-bold-pro-default);
+  }
+}
+
+// Title
+%title-xlarge {
+  @include default-typo-styles(28, 36.4, 700, $font-family-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(32, 38.4, 700, $font-family-default);
+  }
+}
+
+%title-large {
+  @include default-typo-styles(24, 26.88, 700, $font-family-default);
+  @include media(">=tablet") {
+    @include default-typo-styles(28, 36.4, 700, $font-family-default);
+  }
+}
+
+%title-default {
+  @include default-typo-styles(24, 26.88, 700, $font-family-default);
+}
+
+%title-small {
+  @include default-typo-styles(16, 21.28, 700, $font-family-default);
+}
+
+// Label
+@mixin label-large {
+  @include default-typo-styles(20, 22.8, 500, $font-family-value-sans-medium-pro);
+}
+
+@mixin label-default {
+  @include default-typo-styles(16, 21.28, 500, $font-family-value-sans-medium-pro);
+}
+
+@mixin label-small {
+  @include default-typo-styles(14, 19.6, 500, $font-family-value-sans-medium-pro);
+}
+
+// Body
+@mixin body-large {
+  @include default-typo-styles(18, 27, 400, $font-family-default);
+}
+
+@mixin body-default {
+  @include default-typo-styles(16, 21.28, 400, $font-family-default);
+}
+
+@mixin body-small {
+  @include default-typo-styles(14, 19.6, 400, $font-family-default);
+}
+
+@mixin body-large-bold {
+  @include default-typo-styles(18, 27, 700, $font-family-value-sans-bold-pro);
+}
+
+@mixin body-default-bold {
+  @include default-typo-styles(16, 21, 700, $font-family-value-sans-bold-pro);
+}
+
+@mixin body-small-bold {
+  @include default-typo-styles(14, 20, 700, $font-family-value-sans-bold-pro);
+}
+
+// Meta
+%meta-large {
+  @include default-typo-styles(20, 28, 400, $font-family-default, $textcaps: uppercase);
+}
+
+%meta-default {
+  @include default-typo-styles(14, 18.62, 400, $font-family-default, $textcaps: uppercase);
+}
+
+%meta-default-case {
+  @include default-typo-styles(14, 19.6, 400, $font-family-default);
+}
+
+%meta-small {
+  @include default-typo-styles(12, 13.56, 400, $font-family-default, $textcaps: uppercase);
+}
+
+%meta-italic {
+  @include default-typo-styles(14, 20, 400, $font-family-default, $textcaps: none);
+
+  font-style: italic;
+}

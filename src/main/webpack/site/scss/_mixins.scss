@@ -1,0 +1,236 @@
+@use "sass:math";
+
+@import "./variables";
+
+// ---------- REM Varience -----
+$base-font-size: 16;
+@function rem($pixels, $context: $base-font-size) {
+  @if unitless($pixels) {
+    $pixels: $pixels * 1px;
+  }
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+@mixin default-typo-styles(
+  $size: $font-size,
+  $height: $font-height,
+  $weight: $font-weight,
+  $family: $font-family-default,
+  $space: normal,
+  $kerning: auto,
+  $textcaps: none
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: rem($size);
+  font-kerning: $kerning;
+  text-transform: $textcaps;
+  @if $space==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: rem($space);
+  }
+
+  line-height: rem($height);
+}
+
+// Only display content to screen readers. A la Bootstrap 4.
+// See: http://a11yproject.com/posts/how-to-hide-content/
+@mixin sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+// Animation mixins
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    /* Safari and Chrome */
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    /* Firefox */
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    /* IE10 */
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/**
+*  Fluid typography mixin to create fluid font-size and line hieght for better visusal experience
+*  REference: https://css-tricks.com/snippets/css/fluid-typography/#in-sass
+*/
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $min-line-height, $max-line-height) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-font-size);
+  $u4: math.unit($max-font-size);
+  $u5: math.unit($min-line-height);
+  $u6: math.unit($max-line-height);
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 and $u1==$u5 and $u1==$u6 {
+    @media screen and (min-width: $min-vw) {
+      font-size: calc(
+        #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+          ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+      );
+      line-height: calc(
+        #{$min-line-height} + #{strip-unit($max-line-height - $min-line-height)} *
+          ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+      );
+    }
+    @media screen and (min-width: $max-vw) {
+      font-size: $max-font-size;
+      line-height: $max-line-height;
+    }
+  }
+}
+
+@mixin component-container() {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  @media (width >= 35rem) {
+    max-width: 540px;
+  }
+  @media (width >= 48rem) {
+    max-width: 720px;
+  }
+  @media (width >= 60rem) {
+    max-width: 960px;
+  }
+  @media (width >= 75rem) {
+    max-width: 1140px;
+  }
+  @media (width >= 87.5rem) {
+    max-width: 1320px;
+  }
+}
+/* stylelint-disable */
+@mixin button-variant(
+  $text-color,
+  $bg-1,
+  $border-1,
+  $bg-2,
+  $border-2,
+  $bg-3,
+  $border-3,
+  $bg-4,
+  $border-4,
+  $disabled-text,
+  $outline
+) {
+  color: $text-color;
+  background-color: $bg-1;
+  border: rem(2) solid $border-1;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  
+  span {
+    color: $text-color;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] { 
+    pointer-events: none;
+    background-color: $bg-4;
+    border-color: $border-4;
+
+    span {
+      color: $disabled-text;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: $bg-2;
+  }
+
+  &:focus,
+  &.focus {
+    border: rem(2) solid $border-2;
+    outline: rem(2) solid $outline;
+    outline-offset: rem(2);
+  }
+
+  &:active,
+  &.active {
+    background-color: $bg-3;
+    border: rem(2) solid $border-3;
+  }
+}
+/* stylelint-enable */
+
+@mixin button-size($padding-vertical, $padding-horizontal, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  border-radius: $border-radius;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  border-bottom: rem(0) !important; /* stylelint-disable-line declaration-no-important */
+}
+
+@mixin link-type($link-color, $hover, $focus, $focus-bg) {
+  a {
+    color: $link-color;
+    border-bottom: rem(1) solid $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover;
+      border-color: $hover;
+    }
+
+    &:focus {
+      background-color: $focus-bg;
+      color: $focus;
+      border-bottom: none;
+      padding-bottom: 0;
+      outline: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}

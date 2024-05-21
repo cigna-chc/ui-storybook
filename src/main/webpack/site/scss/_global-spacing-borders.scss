@@ -1,0 +1,75 @@
+/* -------------------------------- 
+Spacing & Shadow
+-------------------------------- */
+
+:root {
+  /* spacing values */
+  --space-unit: 1em; // 16px
+  --space-xxxs: calc(0.5 * var(--space-unit));
+  --space-xxs: calc(1 * var(--space-unit));
+  --space-xs: calc(1.5 * var(--space-unit));
+  --space-sm: calc(2 * var(--space-unit));
+  --space-md: calc(2.5 * var(--space-unit));
+  --space-lg: calc(3 * var(--space-unit));
+  --space-xl: calc(4 * var(--space-unit));
+  --space-xxl: calc(5 * var(--space-unit));
+  --space-xxxl: calc(6 * var(--space-unit));
+  --space-xxxxl: calc(7.5 * var(--space-unit));
+
+  /* border radius */
+  --border-radius-0: 0px;
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-16: 16px;
+  --border-radius-30: 30px;
+  --border-radius-900: 900px;
+
+  /* border width */
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+
+  /* Border Style */
+  --border-style-solid: solid;
+}
+
+/* spacing variable */
+$spacing-8: var(--space-xxxs);
+$spacing-16: var(--space-xxs);
+$spacing-24: var(--space-xs);
+$spacing-32: var(--space-sm);
+$spacing-40: var(--space-md);
+$spacing-48: var(--space-lg);
+$spacing-64: var(--space-xl);
+$spacing-80: var(--space-xxl);
+$spacing-96: var(--space-xxxl);
+$spacing-120: var(--space-xxxxl);
+
+/* Shadow variables */
+
+$shadow-small: 0 1px 2px 1px rgb(0 0 0 / 20%);
+$shadow-default: 0 0.5rem 0.375rem -0.375rem rgb(0 0 0 / 10%);
+$shadow-large: 0 0.625rem 0.75rem 0 rgb(0 0 0 / 20%);
+
+/* Border Radius, Component Border, Border width */
+$border-radius-small: var(--border-radius-4);
+$border-radius-default: var(--border-radius-8);
+$border-radius-large: var(--border-radius-30);
+$border-radius-round: var(--border-radius-900);
+$border-radius-badge: var(--border-radius-4);
+$border-radius-button: var(--border-radius-900);
+$border-radius-container: var(--border-radius-30);
+$border-radius-field: var(--border-radius-8);
+$border-radius-tabs: var(--border-radius-0);
+$border-width-none: var(--border-radius-0);
+$border-width-default: var(--border-width-1);
+$border-width-focus: var(--border-width-2);
+$border-width-large: var(--border-width-4);
+$border-width-button-default: var(--border-width-2);
+$border-width-button-tertiary-outline-focus: var(--border-width-2);
+$border-width-tab-selected: var(--border-width-2);
+$border-width-tab-default: var(--border-width-2);
+$border-style-default: var(--border-style-solid);
+$border-style-button-tertiary: var(--border-style-solid);
