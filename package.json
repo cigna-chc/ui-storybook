@@ -22,7 +22,7 @@
     "build:htl": "node ./tools/htl-converter/index.mjs",
     "prettier": "prettier 'src/main/webpack/!(core-components)/**/*.{js,scss}' --ignore-unknown --write",
     "plop": "plop",
-    "build-storybook": "storybook build -o docs-build"
+    "build-storybook": "storybook build -o storybook-static"
   },
   "devDependencies": {
     "@adobe/htlengine": "^6.4.2",
