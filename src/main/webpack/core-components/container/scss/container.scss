@@ -1,0 +1,369 @@
+/* stylelint-disable */
+@use 'sass:math';
+@use 'sass:list';
+
+// //** Number of max columns in the grid.
+// //** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 0 !default;
+$grid-gutter-sm-width: 1.6% !default;
+$grid-gutter-md-width: 2% !default;
+$grid-gutter-lg-width: 4% !default;
+$grid-gutter-xl-width: 6% !default;
+$grid-vertical-rule: 1px solid #ccc !default;
+
+// TODO: Come-up with best solution for spacing
+.responsivegrid>.aem-Grid.aem-Grid--12>.experiencefragment>.cmp-experiencefragment.cmp-experiencefragment--site-header>.aem-Grid.aem-Grid--12>.columncontrol:has(.breadcrumb) {
+    @include component-container;
+}
+
+.responsivegrid>.aem-Grid.aem-Grid--12>.experiencefragment>.cmp-experiencefragment.cmp-experiencefragment--site-header>.aem-Grid.aem-Grid--12>.columncontrol:has(div>div>div:not(.breadcrumb)),
+.responsivegrid>.aem-Grid.aem-Grid--12>.columncontrol {
+    @include component-container;
+
+    margin-bottom: $spacing-32;
+    @include media('>=tablet') {
+        margin-bottom: $spacing-48;
+    }
+    @include media('>=desktop') {
+        margin-bottom: $spacing-64;
+    }
+}
+
+.columncontrol>.grid>div>div:not(.button) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.responsivegrid>.aem-Grid.aem-Grid--12>.columncontrol:has(.gutters-no) {
+    max-width: 100%;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: flex-start flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    margin: auto;
+
+    &:not([class*="grid-"])>* {
+        width: 100%;
+    }
+
+    &.gutters-no {
+        &>* {
+            padding-right: $grid-gutter-width;
+        }
+    }
+
+    &.gutters-sm {
+        &>* {
+            padding-right: $grid-gutter-sm-width;
+        }
+    }
+
+    &.gutters-md {
+        &>* {
+            padding-right: $grid-gutter-md-width;
+        }
+    }
+
+    &.gutters-lg {
+        &>* {
+            padding-right: $grid-gutter-lg-width;
+        }
+    }
+
+    &.gutters-xl {
+        &>* {
+            padding-right: $grid-gutter-xl-width;
+        }
+    }
+
+    &.vertical-rule {
+        &>*:not(:last-child) {
+            border-right: $grid-vertical-rule;
+        }
+    }
+
+    // Shortcuts
+    &.centered {
+        place-content: center center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &.centered-column {
+        place-content: center center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &.row-start {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &.row-center {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &.row-end {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    &.column-start {
+        flex-direction: column;
+        align-items: flex-start;
+        place-content: flex-start flex-start;
+    }
+
+    &.column-center {
+        flex-direction: column;
+        align-items: center;
+        place-content: center flex-start;
+    }
+
+    &.column-end {
+        flex-direction: column;
+        align-items: flex-end;
+        place-content: flex-end flex-start;
+    }
+
+    // Wrap
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+
+    // Flex-direction
+    &.direction-row {
+        flex-direction: row;
+    }
+
+    &.direction-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.direction-column {
+        flex-direction: column;
+    }
+
+    &.direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    // Justify-content
+    &.justify-start {
+        justify-content: flex-start;
+    }
+
+    &.justify-end {
+        justify-content: flex-end;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.justify-between {
+        justify-content: space-between;
+    }
+
+    &.justify-around {
+        justify-content: space-around;
+    }
+
+    // Align-items
+    &.items-start {
+        align-items: flex-start;
+    }
+
+    &.items-end {
+        align-items: flex-end;
+    }
+
+    &.items-center {
+        align-items: center;
+    }
+
+    &.items-stretch {
+        align-items: stretch;
+    }
+
+    &.items-baseline {
+        align-items: baseline;
+    }
+
+    // Align-content
+    &.content-start {
+        align-content: flex-start;
+    }
+
+    &.content-end {
+        align-content: flex-end;
+    }
+
+    &.content-center {
+        align-content: center;
+    }
+
+    &.content-between {
+        align-content: space-between;
+    }
+
+    &.content-around {
+        align-content: space-around;
+    }
+}
+
+
+/*********************************
+ * GRID COLUMNS
+ *********************************
+ * Each number signifies a column.
+ * Numbers are the numerators of the fraction of the total width of the grid.
+ * The sum of the numbers is the denominator of the same fraction.
+ * For example .grid-2-3 represents a two column grid with the first being
+ * 2/5 (40%) and the second being 3/5 (60%) of the total width.
+ * Example output of (1 1 3):
+ * 20% | 20% | 60%
+ * .grid-1-1-3:nth-child(1) {
+ *     width: 20%;
+ * }
+ * .grid-1-1-3:nth-child(2) {
+ *     width: 20%;
+ * }
+ * .grid-1-1-3:nth-child(3) {
+ *     width: 60%;
+ * }
+ */
+
+// list of all grid layouts to generate
+$grid-list: ( (1 4), (1 3), (3 7), (1 2), (2 3), (1 1), (3 2), (2 1), (7 3), (3 1), (4 1), (1 1 1), (1 1 2), (1 2 1), (2 1 1), (1 1 3), (1 3 1), (3 1 1), (1 2 2), (2 1 2), (2 2 1), (1 1 1 1), (1 1 1 2), (1 1 2 1), (1 2 1 1), (2 1 1 1), (1 1 1 1 1));
+
+// grid layout generator
+@each $list in $grid-list {
+    $selector: 'grid';
+    $denominator: 0;
+    @each $item in $list {
+        $selector: $selector + "-" + $item;
+        $denominator: $denominator + $item;
+    }
+    .#{$selector} {
+        @for $i from 1 through length($list) {
+            $item: list.nth($list, $i);
+            $length: list.length($list);
+            $nth: $length + 'n+' + $i;
+            >*:nth-child(#{$nth}) {
+                width: math.percentage(math.div($item, $denominator));
+            }
+        }
+    }
+}
+
+@include media('<desktop') {
+    [class*="grid-1-1-1-"],
+    [class*="grid-1-1-2-"],
+    [class*="grid-1-2-1-"],
+    [class*="grid-2-1-1-"] {
+        // flex-direction: column;
+        &>*:nth-child(1n+0) {
+            width: 50%;
+        }
+
+        &.vertical-rule {
+            &>*:nth-child(even) {
+                border-right: 0;
+            }
+        }
+    }
+
+    .grid-3-1-1>*:nth-child(3n+1),
+    .grid-2-1-1>*:nth-child(3n+1),
+    .grid-1-3-1>*:nth-child(3n+2),
+    .grid-1-2-1>*:nth-child(3n+2),
+    .grid-1-1-3>*:nth-child(3n+3),
+    .grid-1-1-2>*:nth-child(3n+3) {
+        width: 100%;
+    }
+
+    .grid-3-1-1>*:not(:nth-child(3n+1)),
+    .grid-2-1-1>*:not(:nth-child(3n+1)),
+    .grid-1-3-1>*:not(:nth-child(3n+2)),
+    .grid-1-2-1>*:not(:nth-child(3n+2)),
+    .grid-1-1-3>*:not(:nth-child(3n+3)),
+    .grid-1-1-2>*:not(:nth-child(3n+3)) {
+        width: 50%;
+    }
+
+    // in these cases we want to group the smaller columns together and put the wider column on top.
+    .grid-1-2-1>*:nth-child(3n+2),
+    .grid-1-3-1>*:nth-child(3n+2) {
+        order: -1;
+    }
+}
+
+@include media('<tablet') {
+    .grid {
+        flex-direction: column;
+
+        &>*:nth-child(1n+0) {
+            width: 100%;
+        }
+
+        // removes the adds vertical rule since they're all 100% width
+        &.vertical-rule {
+            &>*:not(:last-child) {
+                border-right: 0;
+            }
+        }
+
+        // reverses the column order
+        &.direction-column-reverse-mobile {
+            flex-direction: column-reverse;
+        }
+
+        // two columns in mobile option
+        &.two-col-mobile {
+            flex-direction: unset;
+
+            &>*:nth-child(1n+0) {
+                width: 50%;
+            }
+
+            // reapplies vertical rule to first column elements
+            &.vertical-rule {
+                &>*:nth-child(odd) {
+                    border-right: $grid-vertical-rule;
+                }
+            }
+        }
+    }
+
+    // undoes tablet specific ordering
+    .grid-1-2-1>*:nth-child(3n+2),
+    .grid-1-3-1>*:nth-child(3n+2) {
+        order: unset;
+    }
+}
+
+.grid-1>div {
+    width: 100%;
+}

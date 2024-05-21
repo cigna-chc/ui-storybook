@@ -1,0 +1,5 @@
+!.storybook
+../ui.apps/
+./src/main/webpack/tests/
+./src/main/webpack/core-components/
+node_modules/**

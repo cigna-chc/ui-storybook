@@ -1,0 +1,607 @@
+@import "placeholders/typography";
+@import "./variables";
+
+p {
+  margin: 0;
+}
+
+@mixin h1 {
+  @extend %h1;
+}
+
+@mixin h2 {
+  @extend %h2;
+}
+
+@mixin h3 {
+  @extend %h3;
+}
+
+@mixin h4 {
+  @extend %h4;
+}
+
+@mixin h5 {
+  @extend %h5;
+}
+
+@mixin h6 {
+  @extend %h6;
+}
+
+@mixin h7 {
+  @extend %h7;
+}
+
+@mixin h8 {
+  @extend %h8;
+}
+
+@mixin h9 {
+  @extend %h9;
+}
+
+@mixin h10 {
+  @extend %h10;
+}
+
+@mixin h11 {
+  @extend %h11;
+}
+
+@mixin h12 {
+  @extend %h12;
+}
+
+@mixin h13 {
+  @extend %h13;
+}
+
+@mixin h1-sansmedium {
+  @extend %h1-sansmedium;
+}
+
+@mixin h2-sansmedium {
+  @extend %h2-sansmedium;
+}
+
+@mixin h3-sansmedium {
+  @extend %h3-sansmedium;
+}
+
+@mixin h4-sansmedium {
+  @extend %h4-sansmedium;
+}
+
+@mixin h5-sansmedium {
+  @extend %h5-sansmedium;
+}
+
+@mixin h6-sansmedium {
+  @extend %h6-sansmedium;
+}
+
+@mixin h7-sansmedium {
+  @extend %h7-sansmedium;
+}
+
+@mixin h8-sansmedium {
+  @extend %h8-sansmedium;
+}
+
+@mixin h9-sansmedium {
+  @extend %h9-sansmedium;
+}
+
+@mixin h10-sansmedium {
+  @extend %h10-sansmedium;
+}
+
+@mixin h11-sansmedium {
+  @extend %h11-sansmedium;
+}
+
+@mixin h12-sansmedium {
+  @extend %h12-sansmedium;
+}
+
+@mixin h13-sansmedium {
+  @extend %h13-sansmedium;
+}
+
+@mixin h1-sansbold {
+  @extend %h1-sansbold;
+}
+
+@mixin h2-sansbold {
+  @extend %h2-sansbold;
+}
+
+@mixin h3-sansbold {
+  @extend %h3-sansbold;
+}
+
+@mixin h4-sansbold {
+  @extend %h4-sansbold;
+}
+
+@mixin h5-sansbold {
+  @extend %h5-sansbold;
+}
+
+@mixin h6-sansbold {
+  @extend %h6-sansbold;
+}
+
+@mixin h7-sansbold {
+  @extend %h7-sansbold;
+}
+
+@mixin h8-sansbold {
+  @extend %h8-sansbold;
+}
+
+@mixin h9-sansbold {
+  @extend %h1-sansbold;
+}
+
+@mixin h10-sansbold {
+  @extend %h2-sansbold;
+}
+
+@mixin h11-sansbold {
+  @extend %h3-sansbold;
+}
+
+@mixin h12-sansbold {
+  @extend %h4-sansbold;
+}
+
+@mixin h13-sansbold {
+  @extend %h5-sansbold;
+}
+
+@mixin h1-serifbold {
+  @extend %h1-serifbold;
+}
+
+@mixin h2-serifbold {
+  @extend %h2-serifbold;
+}
+
+@mixin h3-serifbold {
+  @extend %h3-serifbold;
+}
+
+@mixin h4-serifbold {
+  @extend %h4-serifbold;
+}
+
+@mixin h5-serifbold {
+  @extend %h5-serifbold;
+}
+
+@mixin h6-serifbold {
+  @extend %h6-serifbold;
+}
+
+@mixin h7-serifbold {
+  @extend %h7-serifbold;
+}
+
+@mixin h8-serifbold {
+  @extend %h8-serifbold;
+}
+
+@mixin display-default {
+  @extend %display-default;
+}
+
+@mixin display-small {
+  @extend %display-small;
+}
+
+@mixin headline-large {
+  @extend %headline-large;
+}
+
+@mixin headline-default {
+  @extend %headline-default;
+}
+
+@mixin headline-small {
+  @extend %headline-small;
+}
+
+@mixin title-xlarge {
+  @extend %title-xlarge;
+}
+
+@mixin title-large {
+  @extend %title-large;
+}
+
+@mixin title-default {
+  @extend %title-default;
+}
+
+@mixin title-small {
+  @extend %title-small;
+}
+
+// @mixin body-large {
+//   @extend %body-large;
+// }
+
+// @mixin body-default {
+//   @extend %body-default;
+// }
+
+// @mixin body-small {
+//   @extend %body-small;
+// }
+
+@mixin meta-large {
+  @extend %meta-large;
+}
+
+@mixin meta-default {
+  @extend %meta-default;
+}
+
+@mixin meta-default-case {
+  @extend %meta-default-case;
+}
+
+@mixin meta-small {
+  @extend %meta-small;
+}
+
+@mixin meta-italic {
+  @extend %meta-italic;
+}
+
+@mixin h10-sansmedium-underline {
+  @include h10-sansmedium;
+
+  text-decoration: underline;
+}
+
+@mixin h12-sansmedium-underline {
+  @include h12-sansmedium;
+
+  text-decoration: underline;
+}
+
+// TODO: make it dynamic, render through config
+.h1,
+h1 {
+  @include h1;
+}
+
+.h2,
+h2 {
+  @include h2;
+}
+
+.h3,
+h3 {
+  @include h3;
+}
+
+.h4,
+h4 {
+  @include h4;
+}
+
+.h5,
+h5 {
+  @include h5;
+}
+
+.h6,
+h6 {
+  @include h6;
+}
+
+.h7 {
+  @include h7;
+}
+
+.h8 {
+  @include h8;
+}
+
+.h9 {
+  @include h9;
+}
+
+.h10 {
+  @include h7;
+}
+
+.h11 {
+  @include h8;
+}
+
+.h12 {
+  @include h9;
+}
+
+.h13 {
+  @include h9;
+}
+
+.h1-sansmedium {
+  @include h1-sansmedium;
+}
+
+.h2-sansmedium {
+  @include h2-sansmedium;
+}
+
+.h3-sansmedium {
+  @include h3-sansmedium;
+}
+
+.h4-sansmedium {
+  @include h4-sansmedium;
+}
+
+.h5-sansmedium {
+  @include h5-sansmedium;
+}
+
+.h6-sansmedium {
+  @include h6-sansmedium;
+}
+
+.h7-sansmedium {
+  @include h7-sansmedium;
+}
+
+.h8-sansmedium {
+  @include h8-sansmedium;
+}
+
+.h9-sansmedium {
+  @include h9-sansmedium;
+}
+
+.h10-sansmedium {
+  @include h10-sansmedium;
+}
+
+.h10-sansmedium-underline {
+  @include h10-sansmedium-underline;
+}
+
+.h11-sansmedium {
+  @include h11-sansmedium;
+}
+
+.h11-sansmedium-uppercase {
+  @include h11-sansmedium;
+
+  text-transform: uppercase;
+}
+
+.h11-sansmedium-underline {
+  @include h11-sansmedium;
+
+  text-decoration: underline;
+}
+
+.h12-sansmedium {
+  @include h12-sansmedium;
+}
+
+.h12-sansmedium-underline {
+  @include h12-sansmedium-underline;
+}
+
+.h13-sansmedium {
+  @include h13-sansmedium;
+}
+
+.h13-sansmedium-uppercase {
+  @include h13-sansmedium;
+
+  text-transform: uppercase;
+}
+
+.h1-sansbold {
+  @include h1-sansbold;
+}
+
+.h2-sansbold {
+  @include h2-sansbold;
+}
+
+.h3-sansbold {
+  @include h3-sansbold;
+}
+
+.h4-sansbold {
+  @include h4-sansbold;
+}
+
+.h5-sansbold {
+  @include h5-sansbold;
+}
+
+.h6-sansbold {
+  @include h6-sansbold;
+}
+
+.h7-sansbold {
+  @include h7-sansbold;
+}
+
+.h8-sansbold {
+  @include h8-sansbold;
+}
+
+.h9-sansbold {
+  @include h9-sansbold;
+}
+
+.h10-sansbold {
+  @include h10-sansbold;
+}
+
+.h10-sansbold-underline {
+  @include h10-sansbold;
+
+  text-decoration: underline;
+}
+
+.h11-sansbold {
+  @include h11-sansbold;
+}
+
+.h11-sansbold-uppercase {
+  @include h11-sansbold;
+
+  text-transform: uppercase;
+}
+
+.h11-sansbold-underline {
+  @include h11-sansbold;
+
+  text-decoration: underline;
+}
+
+.h12-sansbold {
+  @include h12-sansbold;
+}
+
+.h12-sansbold-underline {
+  @include h12-sansbold;
+
+  text-decoration: underline;
+}
+
+.h13-sansbold {
+  @include h13-sansbold;
+}
+
+.h13-sansbold-uppercase {
+  @include h13-sansbold;
+
+  text-transform: uppercase;
+}
+
+.h1-serifbold {
+  @include h1-serifbold;
+}
+
+.h2-serifbold {
+  @include h2-serifbold;
+}
+
+.h3-serifbold {
+  @include h3-serifbold;
+}
+
+.h4-serifbold {
+  @include h4-serifbold;
+}
+
+.h5-serifbold {
+  @include h5-serifbold;
+}
+
+.h6-serifbold {
+  @include h6-serifbold;
+}
+
+.h7-serifbold {
+  @include h7-serifbold;
+}
+
+.h8-serifbold {
+  @include h8-serifbold;
+}
+
+.display-default {
+  @include display-default;
+}
+
+.display-small {
+  @include display-small;
+}
+
+.headline-large {
+  @include headline-large;
+}
+
+.headline-default {
+  @include headline-default;
+}
+
+.headline-small {
+  @include headline-small;
+}
+
+.title-xlarge {
+  @include title-xlarge;
+}
+
+.title-large {
+  @include title-large;
+}
+
+.title-default {
+  @include title-default;
+}
+
+.title-small {
+  @include title-small;
+}
+
+.label-large {
+  @include label-large;
+}
+
+.label-default {
+  @include label-default;
+}
+
+.label-small {
+  @include label-small;
+}
+
+.body-large {
+  @include body-large;
+}
+
+.body-default {
+  @include body-default;
+}
+
+.body-small {
+  @include body-small;
+}
+
+.meta-large {
+  @include meta-large;
+
+  text-transform: uppercase;
+}
+
+.meta-default {
+  @include meta-default;
+
+  text-transform: uppercase;
+}
+
+.meta-default-case {
+  @include meta-default-case;
+}
+
+.meta-small {
+  @include meta-small;
+
+  text-transform: uppercase;
+}

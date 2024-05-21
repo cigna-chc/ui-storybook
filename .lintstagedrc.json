@@ -1,0 +1,7 @@
+{
+  "ui.frontend/src/main/webpack/**/*.js": ["eslint --max-warnings 0 ."],
+  "*.css": "stylelint",
+  "*.scss": ["stylelint"],
+  "*": "prettier --ignore-unknown --write",
+  "*.js": ["npm run lint:check", "npm run lint:fix", "npm run prettier:fix"]
+}

@@ -1,0 +1,79 @@
+/* stylelint-disable */
+.mktoForm .mktoRangeField {
+  width: 100% !important;
+  @include media(">=desktop") {
+    width: rem(293) !important;
+  }
+}
+
+.mktoLogicalField .mktoRangeField {
+  width: auto !important;
+}
+
+.mktoForm .mktoRangeField input[type="range"] {
+  padding: rem(0) !important;
+  appearance: none;
+  width: 100% !important;
+  margin: rem(24) 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: rem(15);
+  border: rem(0.75) solid $neutral-20;
+  height: rem(4);
+  background: $neutral-white;
+  @include media(">=desktop") {
+    width: rem(293) !important;
+  }
+}
+
+.mktoForm .mktoRangeField input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: rem(24);
+  width: rem(24);
+  background-color: $action-blue-100;
+  border-radius: 50%;
+  border: none;
+}
+
+/* Thumb: Firefox */
+.mktoForm .mktoRangeField input[type="range"]::-moz-range-thumb {
+  height: rem(24);
+  width: rem(24);
+  background-color: $action-blue-100;
+  border-radius: 50%;
+  border: none;
+  appearance: none;
+}
+
+/* Focus Thumb: Webkit */
+.mktoForm .mktoRangeField input[type="range"]:focus::-webkit-slider-thumb {
+  outline: rem(2) solid $navy-100;
+  outline-offset: rem(4);
+}
+
+/* Focus Thumb: Firfox */
+.mktoForm .mktoRangeField input[type="range"]:focus::-moz-range-thumb {
+  outline: rem(2) solid $navy-100;
+  outline-offset: rem(4);
+}
+
+/* Disabled Thumb */
+.mktoForm .mktoRangeField input[type="range"]:disabled {
+  border-color: $neutral-50-1;
+  cursor: none;
+
+  &::-webkit-slider-thumb {
+    background-color: $neutral-10;
+    border: rem(1) solid $neutral-50-1;
+  }
+
+  &::-moz-range-thumb {
+    background-color: $neutral-10;
+    border: rem(1) solid $neutral-50-1;
+  }
+
+  &::-ms-thumb {
+    background-color: $neutral-10;
+    border: rem(1) solid $neutral-50-1;
+  }
+}

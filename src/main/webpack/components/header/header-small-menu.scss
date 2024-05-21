@@ -1,0 +1,40 @@
+/* stylelint-disable */
+
+header {
+  .cmp-header {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+
+    ul {
+      display: none !important;
+      list-style: none;
+      margin: rem(0) !important;
+      @include media(">=desktop") {
+        display: flex !important;
+        gap: rem(24);
+      }
+
+      li {
+        a {
+          display: inline-block !important;
+          color: $action-blue-100 !important;
+          border-bottom: none !important;
+          text-decoration: none !important;
+          @include label-default;
+
+          &:hover {
+            color: $navy-100 !important;
+          }
+
+          &:focus {
+            background-color: $neutral-100 !important;
+            color: $neutral-white !important;
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+            outline: none !important;
+          }
+        }
+      }
+    }
+  }
+}

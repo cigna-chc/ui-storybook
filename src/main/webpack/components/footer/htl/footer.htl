@@ -1,0 +1,6 @@
+<footer class="footer" data-component="footer">
+    <div class="container">
+       <a href="#"><img src="images/logo.png"></a>
+       <span class="footer__title">footer</span>
+    </div>
+</footer>

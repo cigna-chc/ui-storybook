@@ -1,0 +1,50 @@
+/* stylelint-disable */
+.mktoForm {
+  .mktoRadioList {
+    input[type="radio"] {
+      appearance: none;
+      box-shadow: 0 0 0 1px $neutral-80;
+      border-radius: 50%;
+
+      &:checked {
+        background: $action-blue-100;
+        border: 5px solid $neutral-white;
+      }
+
+      &:focus {
+        outline: 2px solid $neutral-100;
+        outline-offset: 0.25rem;
+      }
+
+      &.mktoInvalid {
+        background: transparent;
+        border: 5px solid $neutral-white;
+        box-shadow: 0 0 0 1px $red-100;
+
+        &:checked {
+          background: $red-100;
+        }
+
+        &:focus {
+          outline: 2px solid $red-100;
+        }
+      }
+
+      &:disabled {
+        appearance: none;
+        border-radius: 50%;
+        background: transparent;
+        border: 5px solid $neutral-10;
+        box-shadow: 0 0 0 1px $neutral-50-1;
+
+        &:checked {
+          background: $neutral-50-1;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

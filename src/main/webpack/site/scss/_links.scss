@@ -1,0 +1,23 @@
+@mixin cmp-link-light {
+  @include link-type($action-blue-100, $navy-100, $neutral-white, $neutral-100);
+
+  a:not(h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a) {
+    @include label-default;
+  }
+}
+
+@mixin cmp-link-light-default {
+  @include link-type($action-blue-100, $navy-100, $neutral-white, $neutral-100);
+}
+
+@mixin cmp-link-inverse-default {
+  @include link-type($neutral-white, $action-blue-20-1, $neutral-80, $neutral-white);
+}
+
+@mixin cmp-link-inverse {
+  @include link-type($neutral-white, $action-blue-20-1, $neutral-80, $neutral-white);
+
+  a:not(h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a) {
+    @include label-default;
+  }
+}

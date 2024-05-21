@@ -1,0 +1,62 @@
+// == Base
+html,
+body {
+  margin: 0;
+  font-size: $font-size;
+  font-family: $font-family-default;
+  line-height: $font-height;
+  color: $color-foreground;
+  background: $color-background;
+  transition: color 0.3s ease-in, background 0.3s ease-in;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p):not(li p, .cmp-title-wrapper ~ .cmp-text-wrapper h2, .cmp-title-wrapper
+    ~ .cmp-text-wrapper
+    h3, .cmp-title-wrapper ~ .cmp-text-wrapper h4, .cmp-title-wrapper ~ .cmp-text-wrapper h5, .cmp-title-wrapper
+    ~ .cmp-text-wrapper
+    h6, .cmp-title-wrapper ~ .cmp-title-wrapper h2, .cmp-title-wrapper ~ .cmp-title-wrapper h3, .cmp-title-wrapper
+    ~ .cmp-title-wrapper
+    h4, .cmp-title-wrapper ~ .cmp-title-wrapper h5, .cmp-title-wrapper ~ .cmp-title-wrapper h6):first-child {
+  margin-block-start: 0;
+  margin-top: rem(0) !important;  /* stylelint-disable-line declaration-no-important */
+}
+
+/* Only for storybook */
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+
+/* Only for Skip to Main Content */
+/* stylelint-disable */
+#main:has(.cmp-separator__horizontal-rule) {
+  display: none;
+}
+
+ol {
+  li:has(b) {
+    &::marker {
+      font-weight: 700;
+    }
+  }
+  li:has(i) {
+    &::marker {
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* stylelint-disable */
+.aem-Grid.aem-Grid--default--12>.aem-GridColumn.aem-GridColumn--default--12.cmp-separator__light,
+.cmp-separator__light {
+    @include component-container;
+
+    .cmp-separator__horizontal-rule {
+        color: $neutral-20;
+    }
+
+}
+
+.aem-Grid.aem-Grid--default--12>.aem-GridColumn.aem-GridColumn--default--12.cmp-separator__knockout,
+.cmp-separator__knockout {
+    @include component-container;
+
+    .cmp-separator__horizontal-rule {
+        color: $neutral-white;
+    }
+
+}
+
+.cmp-separator--hidden {
+    .cmp-separator__horizontal-rule {
+        border: none;
+    }
+}
