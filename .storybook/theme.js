@@ -9,11 +9,12 @@
   governing permissions and limitations under the License.
 */
 
-import { create } from "@storybook/theming";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { create } from '@storybook/theming';
 
 export default create({
-  base: "light",
-  brandTitle: "Component Explorer",
-  brandUrl: "https://example.com",
-  brandImage: "assets/logo.png",
+  base: 'light',
+  brandTitle: 'Cigna Healthcare Storybook',
+  brandUrl: 'https://insights.cignahealthcare.com/performance-testing/industry-insights',
+  brandImage: 'assets/cigna-healthcare-logo.png',
 });
